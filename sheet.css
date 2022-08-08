@@ -143,7 +143,7 @@
 section {
     padding: 100px 0;
 }
-.about, .services, .skills {
+.about, .services, .skills, .teams {
     font-family: 'Poppins', sans-serif;
 }
 section .title {
@@ -234,12 +234,13 @@ section .title::after {
 
 /* services styling start */
 
-.services {
+.services, .teams {
     background: #111;
     color: #fff;
 }
 
-.services .title::before {
+.services .title::before,
+.teams .title::before {
     background: #fff;
 }
 
@@ -286,7 +287,7 @@ section .title::after {
 
 /* skills section styling starts here */
 .skills .title::after {
-    content: "Tools I use";
+    content: "What I know";
 }
 
 .skills .skills-content .column{
@@ -380,6 +381,43 @@ section .title::after {
     
 }
 
+/* my teams section styling */
+.teams .title::after {
+    content: "Who I work with";
+    background: #111;
+}
+
+.teams .carousel .card{
+    background: #222;
+    padding: 25px 35px;
+    border-radius: 6px;
+    text-align: center;
+
+}
+
+.teams .carousel .card img{
+    object-fit: cover;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 3px solid crimson;
+}
+
+
+.teams .carousel .card .text{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+
+}
+
+.teams .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 1300px) {
     .home .max-width {
         margin-left: 0px;
@@ -458,8 +496,8 @@ section .title::after {
     .skills .skills-content .left a{
         margin-bottom: 35px;;
     }
-
 }
+
 
 @media (max-width: 690px) {
     .max-width {
