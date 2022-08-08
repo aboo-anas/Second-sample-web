@@ -143,7 +143,7 @@
 section {
     padding: 100px 0;
 }
-.about, .services {
+.about, .services, .skills {
     font-family: 'Poppins', sans-serif;
 }
 section .title {
@@ -180,12 +180,9 @@ section .title::after {
     transform: translateX(-50%);
 }
 
-.about .title::after {
-    content: "who I am";
-}
-
 .about .about-content,
-.services .service-content {
+.services .service-content,
+.skills .skills-content {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -286,6 +283,103 @@ section .title::after {
     margin: 10px 0.7px 0;
 }
 
+
+/* skills section styling starts here */
+.skills .title::after {
+    content: "Tools I use";
+}
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills .skills-content .left p{
+    text-align: justify;
+}
+
+.skills .skills-content .left a{
+    display: inline-block;
+    background: crimson;
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 16px;
+    margin-top: 20px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 2px solid crimson;
+    transition: all 0.3s ease;
+}
+
+
+.skills .skills-content .left a:hover{
+    color: crimson;
+    background: none;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .skills-content .right span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+
+.skills .skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    background: crimson;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+
+.skills .skills-content .right .html::before{
+    width: 90%;
+
+}
+
+.skills .skills-content .right .sass::before{
+    width: 85%;
+    
+}
+
+.skills .skills-content .right .react::before{
+    width: 75%;
+    
+}
+
+.skills .skills-content .right .django::before{
+    width: 80%;
+    
+}
+
+.skills .skills-content .right .mongoDB::before{
+    width: 70%;
+    
+}
+
 @media (max-width: 1300px) {
     .home .max-width {
         margin-left: 0px;
@@ -357,6 +451,13 @@ section .title::after {
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+    .skills .skills-content .column{
+        width: 100%;
+    }
+
+    .skills .skills-content .left a{
+        margin-bottom: 35px;;
+    }
 
 }
 
@@ -375,6 +476,10 @@ section .title::after {
     .home .home-content .text-3 {
         font-size: 25px;
     }
+    
+    .services .service-content .card{
+        width: 100%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -383,9 +488,5 @@ section .title::after {
     }
     .home .home-content .text-3 {
         font-size: 20px;
-    }
-
-    .services .service-content .card {
-        width: 100%;
     }
 }
