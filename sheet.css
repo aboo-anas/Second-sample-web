@@ -16,6 +16,10 @@
     font-family: 'Ubuntu' 'sans-serif';
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 .navbar .logo a span{
     transition: all 1.5s ease;
     color: crimson;
@@ -389,9 +393,10 @@ section .title::after {
 
 .teams .carousel .card{
     background: #222;
-    padding: 25px 35px;
+    padding: 25px 95px;
     border-radius: 6px;
     text-align: center;
+    transition: all 0.3s ease;
 
 }
 
@@ -401,6 +406,7 @@ section .title::after {
     width: 150px;
     border-radius: 50%;
     border: 3px solid crimson;
+    transition: all 0.3s ease;
 }
 
 
@@ -417,6 +423,48 @@ section .title::after {
     align-items: center;
     justify-content: center;
 }
+
+.teams .carousel .card:hover{
+    background: crimson
+}
+
+
+.teams .carousel .card:hover img{
+    background: #fff;
+}
+
+.teams .carousel .card:hover .box{
+    transform: scale(1.05)
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid crimson!important;
+}
+
+
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+
+
+.owl-dot.active,
+.owl-dot:hover{
+    background: crimson;
+}
+
+
+
 
 @media (max-width: 1300px) {
     .home .max-width {
